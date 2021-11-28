@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="list-header">
+    <h1>{{list?.name}}</h1>
+    <button (click)="newListItem()" mat-button>
+      <mat-icon>add</mat-icon>
+      Add
+    </button>
+  </div>
+  <mat-card
+    class="list">
+    <p class="empty-label" *ngIf="listItems?.length === 0">Empty list</p>
+    <app-list-item *ngFor="let item of listItems" [listItem]="item"></app-list-item>
+  </mat-card>
+</div>

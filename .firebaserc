@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fast-list-client": {
+      "hosting": {
+        "fast-list": [
+          "fast-list-client"
+        ]
+      }
+    }
+  }
+}

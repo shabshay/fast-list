@@ -1,0 +1,4 @@
+<mat-card class="item" *ngIf="listItem">
+  <h3>{{ listItem.text }}</h3>
+  <p>{{ listItem.timestamp?.toDate().toLocaleString() }}</p>
+</mat-card>

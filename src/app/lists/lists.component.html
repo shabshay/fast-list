@@ -1,0 +1,22 @@
+<div class="list-header">
+  <h1>Lists</h1>
+  <button (click)="createList()" mat-button>
+    <mat-icon>add</mat-icon>
+    Create List
+  </button>
+</div>
+<mat-card class="list" *ngFor="let list of lists">
+  <mat-card-title>{{list.name}}</mat-card-title>
+  <mat-card-content>
+    Time Created: {{list.timestamp?.toDate().toLocaleString()}}
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-button color="warn" (click)="delete(list)">
+      <mat-icon>delete</mat-icon>
+    </button>
+    <a mat-button href="/list?id={{list.id}}" target="_blank" color="primary">
+      <mat-icon>open_in_new</mat-icon>
+    </a>
+  </mat-card-actions>
+</mat-card>
+<p class="empty-label" *ngIf="lists?.length === 0">Empty</p>

@@ -1,0 +1,23 @@
+.container {
+  width: 600px;
+  margin: 0 25px 25px 0;
+}
+
+.list {
+  border: solid 1px #ccc;
+  min-height: 60px;
+  border-radius: 4px;
+}
+
+.empty-label {
+  font-size: 2em;
+  padding-top: 10px;
+  text-align: center;
+  opacity: 0.2;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
