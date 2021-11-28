@@ -31,5 +31,7 @@ export class ListsService {
 
   async deleteList(list: List): Promise<void> {
     await this.store.collection('lists').doc(list.id).delete();
+    const docs = await this.store.collection(list.id).ref.get();
+    docs.forEach(y => y.ref.delete());
   }
 }
